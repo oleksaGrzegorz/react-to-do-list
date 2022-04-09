@@ -9,7 +9,7 @@
 @media (max-width: 767px) {
     .buttons__button {
         flex-basis: 100%;
-        margin: 10px;
+        margin: 12px;
     }
 }
 
