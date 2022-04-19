@@ -5,13 +5,13 @@
 }
 
 .section__title {
-        padding: 20px;
+    padding: 20px;
     font-size: 20px;
     margin: 0;
 }
 
 .section__buttons {
-padding: 10px;
+    padding: 10px;
 }
 
 .section__header {
@@ -24,7 +24,20 @@ padding: 10px;
 
 }
 
+@media (max-width:768px) {
+    .section__header {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+}
+
 .section__body {
     padding-bottom: 10px;
 }
 
+@media (max-width:768px) {
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
