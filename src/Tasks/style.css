@@ -11,9 +11,7 @@
     grid-gap: 10px;
     align-items: center;
     border-bottom: 1px solid #ddd;
-    width: 95%;
-    margin: 0 auto;
-  
+    padding: 5px;
   }
   
   .tasks__content--done {
