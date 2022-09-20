@@ -7,11 +7,17 @@ import Container from "./Container";
 import { useEffect, useState } from "react";
 
 function App() {
+
+  const getInitialTasks = () => {
+    const tasksFromLocalStorage = localStorage.getItem("tasks");
+
+    return tasksFromLocalStorage
+    ? JSON.parse(tasksFromLocalStorage)
+    : [];
+  };
+
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "przejść na Reacfsdfsdfsta", done: false },
-    { id: 2, content: "zjeść coś", done: true },
-  ]);
+  const [tasks, setTasks] = useState(getInitialTasks);
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
