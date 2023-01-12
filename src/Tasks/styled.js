@@ -35,28 +35,22 @@ export const Button = styled.button`
   border: none;
   color: white;
   margin: 10px;
+`;
 
-  ${({ done }) =>
-    done &&
-    css`
-      background: green;
+export const DoneButton = styled(Button)`
+  background: green;
+  &:hover {
+    background: hsl(120, 100%, 30%);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+`;
 
-      &:hover {
-        background: hsl(120, 100%, 30%);
-        transition: 0.3s;
-        cursor: pointer;
-      }
-    `}
-
-  ${({ remove }) =>
-    remove &&
-    css`
-      background: red;
-
-      &:hover {
-        background: hsl(0, 100%, 60%);
-        transition: 0.3s;
-        cursor: pointer;
-      }
-    `}
+export const RemoveButton = styled(Button)`
+  background: red;
+  &:hover {
+    background: hsl(0, 100%, 60%);
+    transition: 0.3s;
+    cursor: pointer;
+  }
 `;
