@@ -14,11 +14,13 @@ const Form = () => {
       return;
     }
 
-    dispatch(addTask({
-      content: newTask.trim(),
-      done: false, 
-      id: nanoid(),
-    }));
+    dispatch(
+      addTask({
+        content: newTask.trim(),
+        done: false,
+        id: nanoid(),
+      })
+    );
 
     setNewTask("");
   };

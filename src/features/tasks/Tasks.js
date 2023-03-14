@@ -8,16 +8,10 @@ import { useTasks } from "../../useTasks";
 import { useSelector } from "react-redux";
 import { selectTasks } from "./tasksSlice";
 
-
 function Tasks() {
-
   const { tasks } = useSelector(selectTasks);
 
-  const { 
-    toggleTaskDone, 
-    setAllDone, 
-    addNewTask 
-  } = useTasks();
+  const { toggleTaskDone, setAllDone, addNewTask } = useTasks();
 
   return (
     <Container>
@@ -29,16 +23,8 @@ function Tasks() {
 
       <Section
         title="Lista zadań"
-        body={
-          <TasksList
-            toggleTaskDone={toggleTaskDone}
-          />
-        }
-        extraHeaderContent={
-          <Buttons
-            setAllDone={setAllDone}
-          />
-        }
+        body={<TasksList toggleTaskDone={toggleTaskDone} />}
+        extraHeaderContent={<Buttons setAllDone={setAllDone} />}
       />
     </Container>
   );
