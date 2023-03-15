@@ -27,5 +27,5 @@ export const Header = styled.header`
 `;
 
 export const SectionBody = styled.div`
-  padding-bottom: 10px;
+  padding: 10px;
 `;
