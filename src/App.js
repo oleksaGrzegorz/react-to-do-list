@@ -1,6 +1,7 @@
 import React from "react";
 import TasksPage from "./features/tasks/TasksPage";
-import Author from "./features/author/AuthorPage";
+import TaskPage from "./features/tasks/TaskPage";
+import AuthorPage from "./features/author/AuthorPage";
 import { Link, Switch, Route, HashRouter, Redirect } from "react-router-dom";
 const App = () => (
   <HashRouter>
@@ -14,11 +15,14 @@ const App = () => (
         </li>
       </ul>
       <Switch>
+        <Route path="/tasks/:id">
+          <TaskPage />
+        </Route>
         <Route path="/tasks">
           <TasksPage />
         </Route>
         <Route path="/author">
-          <Author />
+          <AuthorPage />
         </Route>
         <Route path="/">
           <Redirect to="/tasks" />
