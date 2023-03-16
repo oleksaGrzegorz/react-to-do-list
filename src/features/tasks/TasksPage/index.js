@@ -1,13 +1,13 @@
 import Form from "./Form";
-import TasksList from "../../features/tasks/TasksList";
+import TasksList from "./TasksList";
 import Buttons from "./Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import Container from "../../common/Container";
-import { fetchExampleTasks } from "./tasksSlice";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import Container from "../../../common/Container";
+import { fetchExampleTasks } from "../tasksSlice";
 import { useDispatch } from "react-redux";
 
-function Tasks() {
+function TasksPage() {
   const dispatch = useDispatch();
   return (
     <Container>
@@ -31,4 +31,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;

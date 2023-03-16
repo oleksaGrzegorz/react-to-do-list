@@ -1,5 +1,5 @@
 import React from "react";
-import Tasks from "./features/tasks/Tasks";
+import TasksPage from "./features/tasks/TasksPage";
 import Author from "./features/author/AuthorPage";
 import { Link, Switch, Route, HashRouter, Redirect } from "react-router-dom";
 const App = () => (
@@ -15,7 +15,7 @@ const App = () => (
       </ul>
       <Switch>
         <Route path="/tasks">
-          <Tasks />
+          <TasksPage />
         </Route>
         <Route path="/author">
           <Author />

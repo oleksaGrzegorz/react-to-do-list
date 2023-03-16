@@ -54,3 +54,5 @@ export const RemoveButton = styled(Button)`
     cursor: pointer;
   }
 `;
+
+export const Link = styled.a``;
