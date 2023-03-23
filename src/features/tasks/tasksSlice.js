@@ -13,12 +13,12 @@ const tasksSlice = createSlice({
     toggleHideDone: (state) => {
       state.hideDone = !state.hideDone;
     },
-    toggleTaskDone: ({ tasks }, { payload }) => {
-      const index = tasks.findIndex(({ id }) => id === payload);
+    toggleTaskDone: ({ tasks }, { payload: taskId }) => {
+      const index = tasks.findIndex(({ id }) => id === taskId);
       tasks[index].done = !tasks[index].done;
     },
-    removeTask: ({ tasks }, { payload }) => {
-      const index = tasks.findIndex(({ id }) => id === payload);
+    removeTask: ({ tasks }, { payload: taskId }) => {
+      const index = tasks.findIndex(({ id }) => id === taskId);
       tasks.splice(index, 1);
     },
     setAllDone: ({ tasks }) => {
@@ -42,8 +42,8 @@ export const {
   fetchExampleTasks,
   setTasks,
 } = tasksSlice.actions;
-
-export const selectTasks = (state) => state.tasks;
+const selectTasksState = (state) => state.tasks;
+export const selectTasks = (state) => selectTasksState(state).tasks;
 
 export const getTaskById = (state, taskId) =>
   state.tasks.tasks.find(({ id }) => id === taskId);
