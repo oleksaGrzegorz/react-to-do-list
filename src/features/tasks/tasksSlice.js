@@ -17,6 +17,7 @@ const tasksSlice = createSlice({
       const index = tasks.findIndex(({ id }) => id === taskId);
       tasks[index].done = !tasks[index].done;
     },
+
     removeTask: ({ tasks }, { payload: taskId }) => {
       const index = tasks.findIndex(({ id }) => id === taskId);
       tasks.splice(index, 1);
@@ -42,8 +43,8 @@ export const {
   fetchExampleTasks,
   setTasks,
 } = tasksSlice.actions;
-const selectTasksState = (state) => state.tasks;
-export const selectTasks = (state) => selectTasksState(state).tasks;
+
+export const selectTasks = (state) => state.tasks;
 
 export const getTaskById = (state, taskId) =>
   state.tasks.tasks.find(({ id }) => id === taskId);
