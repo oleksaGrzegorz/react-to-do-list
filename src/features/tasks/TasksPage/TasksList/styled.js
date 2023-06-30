@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
 
 export const List = styled.ul`
   margin: 0;
@@ -54,9 +53,4 @@ export const RemoveButton = styled(Button)`
     transition: 0.3s;
     cursor: pointer;
   }
-`;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: teal;
 `;
